@@ -76,9 +76,19 @@ WSGI_APPLICATION = 'url_shortner.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
+import os
+import dj_database_url
+
+import os
+import dj_database_url
+
 DATABASES = {
-    'default': dj_database_url.config(default=os.environ.get('DATABASE_URL'))
+    'default': dj_database_url.config(
+        default=os.environ.get('DATABASE_URL')
+    )
 }
+
+
 
 
 # Password validation
